@@ -1,0 +1,13 @@
+{
+  "name": "teitaraku",
+  "owner": {
+    "name": "teitaraku"
+  },
+  "plugins": [
+    {
+      "name": "pokemon-champions",
+      "source": "./plugins/pokemon-champions",
+      "description": "ポケモンチャンピオンズ（Pokémon Champions）のパーティ構築・ダメージ計算を支援するスキル集。各レギュレーション対応。"
+    }
+  ]
+}
