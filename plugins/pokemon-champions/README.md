@@ -1,6 +1,6 @@
-# Pokémon Champions Party Builder
+# Pokémon Champions
 
-ポケモンチャンピオンズ（Pokémon Champions）のパーティ構築を支援する Claude Code スキルです。
+ポケモンチャンピオンズ（Pokémon Champions）のパーティ構築・ダメージ計算を支援する Claude Code スキルです。
 
 ## 機能
 
@@ -13,7 +13,7 @@
 ## インストール
 
 ```
-/plugin install pokemon-party-builder@teitaraku
+/plugin install pokemon-champions@teitaraku
 ```
 
 ## 使い方
