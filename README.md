@@ -4,8 +4,8 @@ Claude Code 向けスキルプラグインのマーケットプレイスリポ�
 
 ## 収録プラグイン
 
-| プラグイン | 説明 |
-|-----------|------|
+| プラグイン                                        | 説明                                                                                                                |
+| ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | [pokemon-champions](./plugins/pokemon-champions/) | ポケモンチャンピオンズ（Pokémon Champions）のパーティ構築・ダメージ計算を支援するスキル集。各レギュレーション対応。 |
 
 ## セットアップ
@@ -13,7 +13,7 @@ Claude Code 向けスキルプラグインのマーケットプレイスリポ�
 まずマーケットプレイスを登録します。
 
 ```
-/plugin add-marketplace teitaraku/claude-skills
+/plugin marketplace add teitaraku/claude-skills
 ```
 
 ## インストール
@@ -24,19 +24,8 @@ Claude Code 向けスキルプラグインのマーケットプレイスリポ�
 /plugin install <plugin-name>@teitaraku
 ```
 
-## プラグインの追加
-
-新しいプラグインを追加する場合は以下の構成に従ってください。
+plugin を再読み込みします
 
 ```
-plugins/
-└── <plugin-name>/
-    ├── README.md
-    ├── .claude-plugin/
-    │   └── plugin.json
-    └── skills/
-        └── <skill-name>/
-            └── SKILL.md
+/reload-plugins
 ```
-
-追加後、`.claude-plugin/marketplace.json` のプラグイン一覧を更新してください。
