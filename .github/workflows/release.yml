@@ -1,0 +1,52 @@
+name: Release Plugin
+
+on:
+  push:
+    tags:
+      - '*-v[0-9]*'  # e.g. pokemon-champions-v1.0.0
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Extract plugin name and version from tag
+        id: meta
+        run: |
+          TAG="${GITHUB_REF_NAME}"
+          # pokemon-champions-v1.0.0 → plugin=pokemon-champions, version=1.0.0
+          VERSION="${TAG##*-v}"
+          PLUGIN="${TAG%-v${VERSION}}"
+          echo "plugin=${PLUGIN}" >> "$GITHUB_OUTPUT"
+          echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
+
+      - name: Verify plugin directory exists
+        run: |
+          PLUGIN="${{ steps.meta.outputs.plugin }}"
+          if [ ! -d "plugins/${PLUGIN}" ]; then
+            echo "Error: plugins/${PLUGIN} not found"
+            exit 1
+          fi
+
+      - name: Create archives
+        run: |
+          PLUGIN="${{ steps.meta.outputs.plugin }}"
+          VERSION="${{ steps.meta.outputs.version }}"
+          mkdir -p dist
+          cd plugins
+          zip -r "../dist/${PLUGIN}-${VERSION}.zip" "${PLUGIN}/"
+          cp "../dist/${PLUGIN}-${VERSION}.zip" "../dist/${PLUGIN}-${VERSION}.skill"
+          cd ..
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: "${{ steps.meta.outputs.plugin }} v${{ steps.meta.outputs.version }}"
+          files: |
+            dist/${{ steps.meta.outputs.plugin }}-${{ steps.meta.outputs.version }}.zip
+            dist/${{ steps.meta.outputs.plugin }}-${{ steps.meta.outputs.version }}.skill
+          generate_release_notes: true
