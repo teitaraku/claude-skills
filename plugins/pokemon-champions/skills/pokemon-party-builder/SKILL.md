@@ -13,9 +13,13 @@ description: ポケモンチャンピオンズ（Pokémon Champions / ポケチ�
 
 ## 参照リソース
 
-レギュレーション・タイプ相性・役割別ポケモン・データシートの詳細は必ず以下を参照すること：
+レギュレーション・タイプ相性・役割別ポケモン・データシートの詳細は必ず以下を参照すること。
+種族値・タイプ・特性・持ち物効果・対戦時間など、正確な値が必要な情報は **`references/data/*.json` を正本** とし、Markdown は解説・候補整理として使う。
 
-- **`references/regulation-ma.md`**: レギュレーションM-A（現行）の使用可能ポケモン・メガシンカ一覧・使用可能持ち物・禁止事項すべて
+- **`references/data/pokemon.json`**: Regulation M-A の使用可能ポケモン・フォーム一覧、タイプ、種族値、特性、メガストーン。`verification_status` が `needs_confirmation` の値は断定しない
+- **`references/data/items.json`**: 使用可能/未実装の持ち物、効果、入手方法
+- **`references/data/regulations.json`**: レギュレーション期間、対戦時間、選出数、参照元
+- **`references/regulation-ma.md`**: レギュレーションM-A（現行）の概要、使用可能ポケモン抜粋、メガシンカ候補、持ち物メモ、禁止事項
 - **`references/type-chart.md`**: 18タイプの相性表、主要複合タイプの弱点早見表、「一貫」を避ける考え方
 - **`references/role-pokemon.md`**: メガエース／展開役／受け／崩し／対面エース／サポート／ダブル特化 等、役割別の代表ポケモンプール
 - **`references/pokemon-datasheet.md`**: 主要ポケモンの種族値・特性・テンプレ技・典型能力ポイント・素早さベンチマーク
@@ -24,7 +28,10 @@ description: ポケモンチャンピオンズ（Pokémon Champions / ポケチ�
 
 | 場面 | 参照すべきファイル |
 |------|---------------------|
-| 使ってよいか確認したい | `regulation-ma.md` |
+| 種族値・タイプ・特性を確認したい | `data/pokemon.json` |
+| 持ち物の使用可否を確認したい | `data/items.json` |
+| レギュレーション期間・対戦時間を確認したい | `data/regulations.json` |
+| 使ってよいか確認したい | `data/regulations.json` と `regulation-ma.md` |
 | 弱点・耐性を確認したい | `type-chart.md` |
 | 空いた役割を埋めたい | `role-pokemon.md` |
 | 技構成・努力値を決めたい | `pokemon-datasheet.md` |
@@ -45,10 +52,11 @@ description: ポケモンチャンピオンズ（Pokémon Champions / ポケチ�
 
 | 項目 | 時間 |
 |------|------|
-| 総合時間 | 最大20分 |
-| 持ち時間 | 最大7分 |
-| 1ターン選択時間 | 45秒 |
+| 持ち時間 | 10分 |
+| 1ターン選択時間 | 60秒 |
 | 選出時間 | 90秒 |
+
+> 対戦時間は `references/data/regulations.json` を正本とする。外部情報やゲーム内表示で変更が確認された場合は JSON を更新する。
 
 ---
 
@@ -150,7 +158,7 @@ HP:      (種族値×2 + 31 + 能力ポイント×2) × 50 ÷ 100 + 60
 3. `references/regulation-ma.md` で**使用可否・メガ枠・持ち物**を確認
 4. `references/role-pokemon.md` から**残り枠の候補プール**を提示し、相談しながら絞り込む
 5. `references/type-chart.md` で**タイプ一貫チェック**（3匹以上が同じ弱点を共有していないか）
-6. `references/pokemon-datasheet.md` を参照し、**特性・技・能力ポイント**を埋める
+6. `references/data/pokemon.json` と `references/pokemon-datasheet.md` を参照し、**特性・技・能力ポイント**を埋める。JSON 側が `needs_confirmation` の情報は、未確認であることを明示する
 7. **レギュレーションM-A適合チェック**（禁止ポケモン・禁止持ち物・持ち物重複がないか）
 8. 下記フォーマットでパーティを出力する
 

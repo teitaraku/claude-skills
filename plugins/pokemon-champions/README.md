@@ -33,10 +33,15 @@
 
 | ファイル | 内容 |
 |----------|------|
+| `references/data/pokemon.json` | Regulation M-A の使用可能ポケモン・フォーム一覧、タイプ、種族値、特性、メガストーン |
+| `references/data/items.json` | 使用可能/未実装の持ち物、効果、入手方法 |
+| `references/data/regulations.json` | レギュレーション期間、対戦時間、選出数、参照元 |
 | `references/regulation-ma.md` | レギュレーションM-A（使用可能ポケモン・メガシンカ・持ち物一覧） |
 | `references/type-chart.md` | 18タイプの相性表・複合タイプ弱点早見表 |
 | `references/role-pokemon.md` | 役割別ポケモンプール（メガエース・展開役・受け・崩し 等） |
 | `references/pokemon-datasheet.md` | 主要ポケモンの種族値・特性・技構成・素早さベンチマーク |
+
+数値・ルールの正本は `references/data/*.json` です。Markdown は構築方針や候補整理の読み物として扱います。
 
 ## 出力フォーマット
 

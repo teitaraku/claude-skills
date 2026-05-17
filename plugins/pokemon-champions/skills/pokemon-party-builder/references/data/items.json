@@ -1,0 +1,233 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-05-17",
+  "sources": {},
+  "items": [
+    {
+      "name_ja": "こだわりスカーフ",
+      "availability": "available",
+      "acquisition": "initial",
+      "effect": "素早さ1.5倍。同じ技しか選べなくなる。",
+      "verification_status": "needs_confirmation"
+    },
+    {
+      "name_ja": "きあいのタスキ",
+      "availability": "available",
+      "acquisition": "initial",
+      "effect": "HP満タン時のみ、一撃でひんしになるダメージをHP1で耐える。",
+      "verification_status": "needs_confirmation"
+    },
+    {
+      "name_ja": "きあいのハチマキ",
+      "availability": "available",
+      "acquisition": "initial",
+      "effect": "10%の確率でひんしになるダメージをHP1で耐える。",
+      "verification_status": "needs_confirmation"
+    },
+    {
+      "name_ja": "たべのこし",
+      "availability": "available",
+      "acquisition": "initial",
+      "effect": "ターン終了時にHPを1/16回復。",
+      "verification_status": "needs_confirmation"
+    },
+    {
+      "name_ja": "オボンのみ",
+      "availability": "available",
+      "acquisition": "initial",
+      "effect": "HP半分以下でHPを1/4回復。",
+      "verification_status": "needs_confirmation"
+    },
+    {
+      "name_ja": "ラムのみ",
+      "availability": "available",
+      "acquisition": "initial",
+      "effect": "状態異常・混乱を一度回復。",
+      "verification_status": "needs_confirmation"
+    },
+    {
+      "name_ja": "ひかりのこな",
+      "availability": "available",
+      "acquisition": "initial",
+      "effect": "相手の技の命中率を0.9倍にする。",
+      "verification_status": "needs_confirmation"
+    },
+    {
+      "name_ja": "せんせいのツメ",
+      "availability": "available",
+      "acquisition": "initial",
+      "effect": "20%の確率で素早さに関係なく先制できる。",
+      "verification_status": "needs_confirmation"
+    },
+    {
+      "name_ja": "しろいハーブ",
+      "availability": "available",
+      "acquisition": "initial",
+      "effect": "能力が下がったとき、一度だけ元に戻す。",
+      "verification_status": "needs_confirmation"
+    },
+    {
+      "name_ja": "おうじゃのしるし",
+      "availability": "available",
+      "acquisition": "initial",
+      "effect": "ダメージを与えたとき、10%の確率で相手をひるませる。",
+      "verification_status": "needs_confirmation"
+    },
+    {
+      "name_ja": "ピントレンズ",
+      "availability": "available",
+      "acquisition": "vp_shop",
+      "vp_cost": 1000,
+      "effect": "急所率アップ。",
+      "verification_status": "needs_confirmation"
+    },
+    {
+      "name_ja": "でんきだま",
+      "availability": "available",
+      "acquisition": "vp_shop",
+      "vp_cost": 1000,
+      "effect": "ピカチュウの攻撃・特攻が2倍。",
+      "verification_status": "needs_confirmation"
+    },
+    {
+      "name_ja": "メンタルハーブ",
+      "availability": "available",
+      "acquisition": "vp_shop",
+      "vp_cost": 1000,
+      "effect": "アンコール・ちょうはつ等の行動制限を一度回復する。",
+      "verification_status": "needs_confirmation"
+    },
+    {
+      "name_ja": "かいがらのすず",
+      "availability": "available",
+      "acquisition": "vp_shop",
+      "vp_cost": 700,
+      "effect": "与えたダメージの1/8だけHPを回復する。",
+      "verification_status": "needs_confirmation"
+    },
+    {
+      "name_ja": "タイプ強化系",
+      "availability": "available",
+      "acquisition": "vp_shop",
+      "vp_cost": 700,
+      "effect": "対応タイプの技威力を1.2倍にする。",
+      "members": [
+        "シルクのスカーフ",
+        "きせきのタネ",
+        "もくたん",
+        "しんぴのしずく",
+        "じしゃく",
+        "とけないこおり",
+        "するどいくちばし",
+        "やわらかいすな",
+        "どくバリ",
+        "くろおび",
+        "まがったスプーン",
+        "ぎんのこな",
+        "かたいいし",
+        "のろいのおふだ",
+        "りゅうのキバ",
+        "メタルコート",
+        "くろいメガネ",
+        "ようせいのハネ"
+      ],
+      "verification_status": "needs_confirmation"
+    },
+    {
+      "name_ja": "各種状態回復きのみ",
+      "availability": "available",
+      "acquisition": "vp_shop",
+      "vp_cost": 400,
+      "effect": "対応する状態異常を一度回復する。",
+      "members": [
+        "クラボのみ",
+        "カゴのみ",
+        "モモンのみ",
+        "チーゴのみ",
+        "ナナシのみ",
+        "キーのみ"
+      ],
+      "verification_status": "needs_confirmation"
+    },
+    {
+      "name_ja": "各種弱点半減きのみ",
+      "availability": "available",
+      "acquisition": "vp_shop",
+      "vp_cost": 400,
+      "effect": "対応タイプの効果抜群技を受けたとき、一度だけダメージを半減する。",
+      "members": [
+        "ホズのみ",
+        "オッカのみ",
+        "イトケのみ",
+        "ソクノのみ",
+        "リンドのみ",
+        "ヤチェのみ",
+        "ヨプのみ",
+        "ビアーのみ",
+        "シュカのみ",
+        "バコウのみ",
+        "ウタンのみ",
+        "タンガのみ",
+        "ヨロギのみ",
+        "カシブのみ",
+        "ハバンのみ",
+        "ナモのみ",
+        "リリバのみ",
+        "ロゼルのみ"
+      ],
+      "verification_status": "needs_confirmation"
+    },
+    {
+      "name_ja": "オレンのみ",
+      "availability": "available",
+      "acquisition": "vp_shop",
+      "vp_cost": 400,
+      "effect": "HP半分以下でHPを10回復する。",
+      "verification_status": "needs_confirmation"
+    },
+    {
+      "name_ja": "ヒメリのみ",
+      "availability": "available",
+      "acquisition": "vp_shop",
+      "vp_cost": 400,
+      "effect": "PPを10回復する。",
+      "verification_status": "needs_confirmation"
+    },
+    {
+      "name_ja": "こだわりメガネ",
+      "availability": "unavailable",
+      "effect": "未実装として扱う。",
+      "verification_status": "needs_confirmation"
+    },
+    {
+      "name_ja": "こだわりハチマキ",
+      "availability": "unavailable",
+      "effect": "未実装として扱う。",
+      "verification_status": "needs_confirmation"
+    },
+    {
+      "name_ja": "いのちのたま",
+      "availability": "unavailable",
+      "effect": "未実装として扱う。",
+      "verification_status": "needs_confirmation"
+    },
+    {
+      "name_ja": "ゴツゴツメット",
+      "availability": "unavailable",
+      "effect": "未実装として扱う。",
+      "verification_status": "needs_confirmation"
+    },
+    {
+      "name_ja": "どくどく玉",
+      "availability": "unavailable",
+      "effect": "未実装として扱う。",
+      "verification_status": "needs_confirmation"
+    },
+    {
+      "name_ja": "イカサマダイス",
+      "availability": "unavailable",
+      "effect": "未実装として扱う。",
+      "verification_status": "needs_confirmation"
+    }
+  ]
+}
