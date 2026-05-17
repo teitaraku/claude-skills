@@ -32,21 +32,24 @@ jobs:
             exit 1
           fi
 
-      - name: Create archives
+      - name: Create archives per skill
         run: |
           PLUGIN="${{ steps.meta.outputs.plugin }}"
           VERSION="${{ steps.meta.outputs.version }}"
           mkdir -p dist
-          cd plugins
-          zip -r "../dist/${PLUGIN}-${VERSION}.zip" "${PLUGIN}/"
-          cp "../dist/${PLUGIN}-${VERSION}.zip" "../dist/${PLUGIN}-${VERSION}.skill"
-          cd ..
+          SKILLS_DIR="plugins/${PLUGIN}/skills"
+          for SKILL_PATH in "${SKILLS_DIR}"/*/; do
+            SKILL=$(basename "${SKILL_PATH}")
+            ARCHIVE="dist/${PLUGIN}-${SKILL}-${VERSION}"
+            cd "${SKILL_PATH}"
+            zip -r "../../../../${ARCHIVE}.zip" .
+            cp "../../../../${ARCHIVE}.zip" "../../../../${ARCHIVE}.skill"
+            cd - > /dev/null
+          done
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           name: "${{ steps.meta.outputs.plugin }} v${{ steps.meta.outputs.version }}"
-          files: |
-            dist/${{ steps.meta.outputs.plugin }}-${{ steps.meta.outputs.version }}.zip
-            dist/${{ steps.meta.outputs.plugin }}-${{ steps.meta.outputs.version }}.skill
+          files: dist/*
           generate_release_notes: true
